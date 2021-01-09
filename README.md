@@ -38,6 +38,29 @@ Please refer to the explanation below to figure out your secret key:
 
 ![Illustration for the secret key][illustration-secret-key]
 
+## Usage
+
+An example script `main.py` is provided to load JSON data.
+It can be run as follows:
+```bash
+python main.py
+```
+
+Output:
+```
+[ISteamApps] #apps = 107911
+[IStoreService] #apps = 48792
+```
+
+Depending on the API interface, the data snapshots are different.
+As of January 9, 2021:
+-   `ISteamApps` retrieves about 108k apps,
+-   `IStoreService` retrieves about 49k apps.
+
+The discrepancy is likely due to the fact that:
+-   `ISteamApps` retrieves games, DLC, software items, hardware, videos and series,
+-   `IStoreService` only retrieves games (if used with the default request arguments).
+
 ## Unofficial API: GameDataCrunch
 
 [GameDataCrunch][gdc-website] provides an unofficial API to retrieve the list of apps on the Steam store.
