@@ -38,11 +38,27 @@ Please refer to the explanation below to figure out your secret key:
 
 ![Illustration for the secret key][illustration-secret-key]
 
+## Unofficial API: GameDataCrunch
+
+[GameDataCrunch][gdc-website] provides an unofficial API to retrieve the list of apps on the Steam store.
+
+It can be an alternative if you don't have an access key for the official API.
+
+A Python package [`gamedatacrunch`][gdc-github] is available on [PyPI][gdc-pypi].
+
 ## References
 
--   [`ISteamApps` interface][steam-web-api-ISteamApps]
--   [`IStoreService` interface][steam-web-api-IStoreService]
--   [Steam Web API Documentation][steam-web-api-documentation]
+-   Official API:
+    - [`ISteamApps` interface][steam-web-api-ISteamApps]
+    - [`IStoreService` interface][steam-web-api-IStoreService]
+    - [Steam Web API Documentation][steam-web-api-documentation]
+-   Unofficial API:
+    - Website: [GameDataCrunch][gdc-website]
+    - Python package: [`gamedatacrunch`][gdc-github]@[PyPI][gdc-pypi]
+
+[gdc-website]: <https://www.gamedatacrunch.com/>
+[gdc-github]: <https://github.com/woctezuma/gamedatacrunch>
+[gdc-pypi]: <https://pypi.org/project/gamedatacrunch/>
 
 [steam-web-api-ISteamApps]: <https://steamapi.xpaw.me/#ISteamApps/GetAppList>
 [steam-web-api-IStoreService]: <https://steamapi.xpaw.me/#IStoreService/GetAppList>
