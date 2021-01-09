@@ -26,7 +26,7 @@ A request is made to the following endpoint:
 
 > `https://api.steampowered.com/IStoreService/GetAppList/v1/?key=is_here_but_hidden&max_results=50000`
 
-`IStoreService` should be called with the following argument:
+`IStoreService` should be called with the following arguments:
 -   `key=is_here_but_hidden`: your access key,
 -   `max_results=50000`: the number of apps to return at a time. Max is 50k.
 
