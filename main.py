@@ -32,6 +32,18 @@ def load_data(api_interface_name, page_no=1):
     return app_list
 
 
+def save_app_ids(app_list):
+    fname = "data/all_app_ids.txt"
+
+    with open(fname, "w", encoding="utf8") as f:
+        for app in app_list:
+            app_id = app["appid"]
+            f.write(f"{app_id}\n")
+
+    return
+
+
 if __name__ == "__main__":
     app_list_ISA = load_data(api_interface_name="ISteamApps")
     app_list_ISS = load_data(api_interface_name="IStoreService")
+    save_app_ids(app_list_ISS)
