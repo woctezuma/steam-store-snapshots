@@ -1,8 +1,13 @@
 import json
 
 
-def load_data(api_interface_name):
-    fname = "data/{}.json".format(api_interface_name)
+def load_data(api_interface_name, page_no=1):
+    if page_no == 1:
+        file_suffix = ""
+    else:
+        file_suffix = f"_page_{page_no}"
+
+    fname = f"data/{api_interface_name}{file_suffix}.json"
 
     with open(fname, "r", encoding="utf8") as f:
         data = json.load(f)
@@ -12,9 +17,17 @@ def load_data(api_interface_name):
     else:
         app_list = data["response"]["apps"]
 
+    if (
+        "response" in data
+        and "have_more_results" in data["response"]
+        and data["response"]["have_more_results"]
+    ):
+        app_list += load_data(api_interface_name, page_no + 1)
+
     num_apps = len(app_list)
 
-    print("[{}] #apps = {}".format(api_interface_name, num_apps))
+    if page_no == 1:
+        print(f"[{api_interface_name}] #apps = {num_apps}")
 
     return app_list
 
