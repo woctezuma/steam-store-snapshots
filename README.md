@@ -4,7 +4,7 @@ This repository contains data snapshots of the list of apps on the Steam store.
 
 ## Data
 
-Data can provide from the following API interfaces:
+Data can be fetched from the following API interfaces:
 -   `ISteamApps`
 -   `IStoreService`
 
