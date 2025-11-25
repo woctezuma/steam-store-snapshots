@@ -10,6 +10,9 @@ Data can be fetched from the following API interfaces:
 
 ### `ISteamApps`
 
+> [!WARNING]
+> As of November 25, 2025, this API is [deprecated][steam-web-api-deprecated], because it "can no longer scale to the number of items available on Steam".
+
 ![Illustration for ISteamApps][illustration-ISteamApps]
 
 A request is made to the following endpoint:
@@ -86,6 +89,7 @@ A Python package [`gamedatacrunch`][gdc-github] is available on [PyPI][gdc-pypi]
 [steam-web-api-ISteamApps]: <https://steamapi.xpaw.me/#ISteamApps/GetAppList>
 [steam-web-api-IStoreService]: <https://steamapi.xpaw.me/#IStoreService/GetAppList>
 [steam-web-api-documentation]: <https://steamapi.xpaw.me/>
+[steam-web-api-deprecated]: <https://partner.steamgames.com/doc/webapi/isteamapps?language=english>
 
 [illustration-ISteamApps]: <https://raw.githubusercontent.com/wiki/woctezuma/steam-store-snapshots/img/ISteamApps.png>
 [illustration-IStoreService]: <https://raw.githubusercontent.com/wiki/woctezuma/steam-store-snapshots/img/IStoreService.png>
